@@ -40,6 +40,8 @@ def login(request):
 
         user = models.AdminUser.objects.filter(name=username).first()
         print (user)
+        print ("========")
+
         if user:
             # check_password ("原始值","加密值")
             if check_password(password,user.password):
