@@ -12,6 +12,7 @@ source /usr/local/.venv3/bin/activate
 
 
 pip3 install -i https://pypi.douban.com/simple django
+pip3 install -i https://pypi.douban.com/simple django-cors-headers
 
 
 python manage.py makemigrations
