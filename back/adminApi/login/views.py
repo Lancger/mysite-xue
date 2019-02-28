@@ -34,15 +34,7 @@ def login(request):
         json_result = json.loads (postBody)
         username = json_result.get('name', None)
         password = json_result.get('password', None)
-        print ("========")
-        print (json_result, username, password)
-        print ("========")
-
         user = models.AdminUser.objects.filter(name=username).first()
-        print (user.password)
-        print (password)
-        print ("========")
-
         if user:
             # check_password ("原始值","加密值")
             if check_password(password,user.password):
