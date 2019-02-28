@@ -36,7 +36,7 @@ python manage.py createsuperuser --username admin --email admin@domain.com
 ```
 python manage.py runserver 0.0.0.0:8000
 
-登录账号为：admin  密码为：123456
+登录账号为：admin  密码为：admin123456
 
 
 访问测试：
