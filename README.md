@@ -10,18 +10,32 @@ source /usr/local/.venv3/bin/activate
 #vim ~/.bashrc
 source /usr/local/.venv3/bin/activate
 
-
 pip3 install -i https://pypi.douban.com/simple django
 pip3 install -i https://pypi.douban.com/simple django-cors-headers
+```
 
+# 数据库操作
 
+```
+1、创建数据库
+mysql -h 127.0.0.1 -u root -p123456 -e "create database mysite default character set utf8mb4 collate utf8mb4_unicode_ci;"
+mysql -h 127.0.0.1 -u root -p123456 mysite < data.sql
+
+2、建表操作
 python manage.py makemigrations
 python manage.py migrate
 
-python manage.py createsuperuser --username admin --email admin@domain.com
-
-1、创建超级管理员
+3、创建超级管理员
 python manage.py createsuperuser
+
+python manage.py createsuperuser --username admin --email admin@domain.com
 
 ```
 
+# 运行
+```
+python manage.py runserver 0.0.0.0:8000
+
+登录账号为：admin  密码为：admin123456
+
+```
