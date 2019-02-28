@@ -1,6 +1,7 @@
 from django.db import models
 import datetime
 
+
 # 环境表
 class Environment(models.Model):
     name = models.CharField(max_length=64)
@@ -16,6 +17,7 @@ class Environment(models.Model):
         db_table = 'environment'  # 自定义表名称为environment
         # app_label = ''
 
+
 # database 管理表
 class ManageDb(models.Model):
     name = models.CharField(max_length=64)
@@ -27,6 +29,7 @@ class ManageDb(models.Model):
 
     class Meta:
         db_table = 'manageDb'  # 自定义表名称为manageDb
+
 
 # sql语句 管理表
 class ManageSql(models.Model):
@@ -41,6 +44,7 @@ class ManageSql(models.Model):
 
     class Meta:
         db_table = 'manageSql'  # 自定义表名称为mytable
+
 
 # 后台管理员表
 class AdminUser (models.Model):
