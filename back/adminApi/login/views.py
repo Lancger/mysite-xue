@@ -34,6 +34,9 @@ def login(request):
         json_result = json.loads (postBody)
         username = json_result.get('name', None)
         password = json_result.get('password', None)
+        print ("========")
+        print (json_result, username, password)
+        print ("========")
 
         user = models.AdminUser.objects.filter(name=username).first()
         if user:
