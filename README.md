@@ -38,4 +38,9 @@ python manage.py runserver 0.0.0.0:8000
 
 登录账号为：admin  密码为：123456
 
+
+访问测试：
+
+http://127.0.0.1/api/user/
+
 ```
