@@ -39,7 +39,8 @@ def login(request):
         print ("========")
 
         user = models.AdminUser.objects.filter(name=username).first()
-        print (user)
+        print user.password
+        print password
         print ("========")
 
         if user:
